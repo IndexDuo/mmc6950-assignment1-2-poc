@@ -23,7 +23,6 @@ export default function Home() {
     useEffect(() => {
         document.title = "FIRE Tracker";
 
-        // prices cache (weekly)
         const cachedPrices = localStorage.getItem("poc_prices");
         if (cachedPrices) {
             const cachedPricesData = JSON.parse(cachedPrices);
@@ -32,7 +31,6 @@ export default function Home() {
             }
         }
 
-        // inputs from /input page
         const savedInputs = localStorage.getItem("fire_inputs");
         if (savedInputs) {
             const data = JSON.parse(savedInputs);
